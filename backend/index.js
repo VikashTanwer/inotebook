@@ -21,13 +21,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-// app.get('/api/signup', (req, res) => {
-//     res.send('signup')
-//   })
-
-//   app.get('/api/login', (req, res) => {
-//     res.send('login')
-//   })
 
 app.listen(port, () => {
   console.log(`inotebook backend listening on port ${port}`)

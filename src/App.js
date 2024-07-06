@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 // import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NoteState from "./context/notes/Notestate";
 
 function App() {
   // const routes = [
@@ -25,13 +26,17 @@ function App() {
   // const router = createBrowserRouter(routes);
   return (
     <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
+      <NoteState>
+        <Router>
+          <Navbar />
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
+        </Router>
+      </NoteState>
     </>
   );
 }
