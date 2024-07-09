@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 // import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoteState from "./context/notes/Notestate";
+import Alert from "./components/Alert";
 
 function App() {
   // const routes = [
